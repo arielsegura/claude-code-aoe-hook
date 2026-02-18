@@ -10,19 +10,11 @@ Configure which AoE2 taunt sounds play for Claude Code lifecycle events.
 /aoe2-configure Stop         # Disable the Stop event (empty mapping)
 ```
 
-## Dynamic Context
-
-Current sound mappings:
-```
-!`cat __PLUGIN_ROOT__/config/sound-map.json`
-```
-
-Available sounds:
-```
-!`ls __PLUGIN_ROOT__/sounds/ | sort`
-```
-
 ## Instructions for Claude
+
+**Before doing anything else, gather current state using your tools:**
+1. Read `__PLUGIN_ROOT__/config/sound-map.json` using the Read tool to get current mappings
+2. List available sounds using the Glob tool with pattern `__PLUGIN_ROOT__/sounds/*.mp3`
 
 You are helping the user configure AoE2 taunt sounds for Claude Code lifecycle events.
 
@@ -59,7 +51,7 @@ If no arguments were given, run the interactive flow:
    ...
    ```
 
-2. **Show available sounds** numbered list (use the dynamic context above)
+2. **Show available sounds** numbered list (from the Glob results you retrieved)
 
 3. **Ask the user**:
    - Which event to configure? (or "done" to finish)

@@ -64,6 +64,8 @@ with open(settings_file, "w") as f:
 
 print(f"Uninstalled hooks from {settings_file}")
 EOF
+  rm -f "$HOME/.claude/commands/aoe2-configure.md"
+  echo "Removed ~/.claude/commands/aoe2-configure.md"
   exit 0
 fi
 
@@ -106,3 +108,10 @@ with open(settings_file, "w") as f:
 
 print(f"Installed hooks into {settings_file}")
 EOF
+
+COMMANDS_DIR="$HOME/.claude/commands"
+mkdir -p "$COMMANDS_DIR"
+sed "s|__PLUGIN_ROOT__|${PLUGIN_ROOT}|g" \
+  "${PLUGIN_ROOT}/commands/configure/COMMAND.md" \
+  > "${COMMANDS_DIR}/aoe2-configure.md"
+echo "Installed ~/.claude/commands/aoe2-configure.md"

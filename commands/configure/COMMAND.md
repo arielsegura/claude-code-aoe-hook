@@ -1,32 +1,32 @@
-# /aoe2-taunts:configure
+# /aoe2-configure
 
 Configure which AoE2 taunt sounds play for Claude Code lifecycle events.
 
 ## Usage
 
 ```
-/aoe2-taunts:configure              # Interactive mode
-/aoe2-taunts:configure Stop 30      # Direct mode: map Stop event to sound #30 (WOLOLO)
-/aoe2-taunts:configure Stop         # Disable the Stop event (empty mapping)
+/aoe2-configure              # Interactive mode
+/aoe2-configure Stop 30      # Direct mode: map Stop event to sound #30 (WOLOLO)
+/aoe2-configure Stop         # Disable the Stop event (empty mapping)
 ```
 
 ## Dynamic Context
 
 Current sound mappings:
 ```
-!`cat config/sound-map.json`
+!`cat __PLUGIN_ROOT__/config/sound-map.json`
 ```
 
 Available sounds:
 ```
-!`ls sounds/ | sort`
+!`ls __PLUGIN_ROOT__/sounds/ | sort`
 ```
 
 ## Instructions for Claude
 
 You are helping the user configure AoE2 taunt sounds for Claude Code lifecycle events.
 
-**Plugin root**: The `config/sound-map.json` file lives at `config/sound-map.json` relative to the plugin directory.
+**Write the updated config to**: `__PLUGIN_ROOT__/config/sound-map.json`
 
 ### Supported Events
 
@@ -36,12 +36,12 @@ You are helping the user configure AoE2 taunt sounds for Claude Code lifecycle e
 
 ### Direct Argument Mode
 
-If the user ran `/aoe2-taunts:configure <Event> <Number>`:
+If the user ran `/aoe2-configure <Event> <Number>`:
 - Map the named event to the sound with that number
-- Update `config/sound-map.json` using the Write tool
+- Update `__PLUGIN_ROOT__/config/sound-map.json` using the Write tool
 - Confirm with AoE2-themed flavor text (e.g., "WOLOLO! Stop is now mapped to...")
 
-If the user ran `/aoe2-taunts:configure <Event>` with no number:
+If the user ran `/aoe2-configure <Event>` with no number:
 - Disable that event (set to empty string `""`)
 - Confirm the change
 
@@ -65,7 +65,7 @@ If no arguments were given, run the interactive flow:
    - Which event to configure? (or "done" to finish)
    - Which sound number to assign? (or "0" / blank to disable)
 
-4. **Update** `config/sound-map.json` via the Write tool with the complete updated JSON
+4. **Update** `__PLUGIN_ROOT__/config/sound-map.json` via the Write tool with the complete updated JSON
 
 5. **Confirm** with AoE2-themed flavor text matching the chosen sound
 

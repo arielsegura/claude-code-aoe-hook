@@ -21,7 +21,9 @@ This writes absolute-path hook entries into `.claude/settings.json` in your proj
 
 ### 3. Restart Claude Code
 
-Hooks activate on next session start.
+Hooks activate on next session start. You'll also get:
+- **WOLOLO** on every response (and more, as configured)
+- `/aoe2-configure` — interactive command to change sound mappings
 
 ### Uninstall from a project
 
@@ -41,7 +43,7 @@ Hooks activate on next session start.
 
 1. Install the plugin in Claude Code (add this directory as a plugin)
 2. WOLOLO plays automatically when Claude finishes any response
-3. Run `/aoe2-taunts:configure` to customize which sounds play for which events
+3. Run `/aoe2-configure` to customize which sounds play for which events
 
 ## Default Sound Mappings
 
@@ -50,7 +52,7 @@ Hooks activate on next session start.
 | Stop | 30 WOLOLO.mp3 | Claude finishes responding |
 | Notification | 16 Enemy Sighted.mp3 | Permission prompts / idle alerts |
 
-All other events are disabled by default. Enable them via `/aoe2-taunts:configure`.
+All other events are disabled by default. Enable them via `/aoe2-configure`.
 
 ## Supported Events
 
@@ -72,7 +74,7 @@ All other events are disabled by default. Enable them via `/aoe2-taunts:configur
 ## Interactive Configuration
 
 ```
-/aoe2-taunts:configure
+/aoe2-configure
 ```
 
 This command lets you:
@@ -83,9 +85,9 @@ This command lets you:
 
 **Direct mode** (skip the interactive flow):
 ```
-/aoe2-taunts:configure Stop 30       # Map Stop to sound #30 (WOLOLO)
-/aoe2-taunts:configure TaskCompleted 17  # Map TaskCompleted to "It is Good To be the King"
-/aoe2-taunts:configure PreToolUse    # Disable PreToolUse
+/aoe2-configure Stop 30       # Map Stop to sound #30 (WOLOLO)
+/aoe2-configure TaskCompleted 17  # Map TaskCompleted to "It is Good To be the King"
+/aoe2-configure PreToolUse    # Disable PreToolUse
 ```
 
 ## Manual Configuration

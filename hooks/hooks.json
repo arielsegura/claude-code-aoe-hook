@@ -1,0 +1,17 @@
+{
+  "description": "Play AoE2 taunt sounds on Claude Code lifecycle hook events",
+  "hooks": {
+    "Stop":               [{"hooks": [{"type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/scripts/play-sound.sh Stop",               "async": true}]}],
+    "SessionStart":       [{"hooks": [{"type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/scripts/play-sound.sh SessionStart",       "async": true}]}],
+    "SessionEnd":         [{"hooks": [{"type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/scripts/play-sound.sh SessionEnd",         "async": true}]}],
+    "Notification":       [{"hooks": [{"type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/scripts/play-sound.sh Notification",       "async": true}]}],
+    "UserPromptSubmit":   [{"hooks": [{"type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/scripts/play-sound.sh UserPromptSubmit",   "async": true}]}],
+    "PreToolUse":         [{"hooks": [{"type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/scripts/play-sound.sh PreToolUse",         "async": true}]}],
+    "PostToolUse":        [{"hooks": [{"type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/scripts/play-sound.sh PostToolUse",        "async": true}]}],
+    "PostToolUseFailure": [{"hooks": [{"type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/scripts/play-sound.sh PostToolUseFailure", "async": true}]}],
+    "TaskCompleted":      [{"hooks": [{"type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/scripts/play-sound.sh TaskCompleted",      "async": true}]}],
+    "SubagentStop":       [{"hooks": [{"type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/scripts/play-sound.sh SubagentStop",       "async": true}]}],
+    "SubagentStart":      [{"hooks": [{"type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/scripts/play-sound.sh SubagentStart",      "async": true}]}],
+    "PreCompact":         [{"hooks": [{"type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/scripts/play-sound.sh PreCompact",         "async": true}]}]
+  }
+}

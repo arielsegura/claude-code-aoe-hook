@@ -1,0 +1,15 @@
+{
+  "_comment": "Map hook event names to MP3 filenames in sounds/. Empty string to disable.",
+  "Stop":               "30 WOLOLO.mp3",
+  "Notification":       "16 Enemy Sighted.mp3",
+  "SessionStart":       "",
+  "SessionEnd":         "",
+  "UserPromptSubmit":   "",
+  "PreToolUse":         "",
+  "PostToolUse":        "",
+  "PostToolUseFailure": "",
+  "TaskCompleted":      "",
+  "SubagentStop":       "",
+  "SubagentStart":      "",
+  "PreCompact":         ""
+}

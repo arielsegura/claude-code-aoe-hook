@@ -1,0 +1,6 @@
+{
+  "name": "aoe2-taunts",
+  "version": "1.0.0",
+  "description": "Play Age of Empires 2 taunt sounds on Claude Code lifecycle hook events.",
+  "author": { "name": "Ariel Segura" }
+}
